@@ -20,6 +20,7 @@ This repository contains implementations of a simple arithmetic calculator in va
 
 ### **Scheme (`schemecalcelif.scm`)**
 - Requires a Scheme interpreter such as MIT/GNU Scheme or Racket.
+- (I used Racket)
 - Run the program using:
   ```sh
   mit-scheme --load schemecalcelif.scm
@@ -33,6 +34,7 @@ This repository contains implementations of a simple arithmetic calculator in va
   ```
 
 ### **Ada (`calculator.adb`)**
+-Requires GNAT.
 - Compile and run using:
   ```sh
   gcc -c calculator.adb
