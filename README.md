@@ -32,12 +32,12 @@ This repository contains implementations of a simple arithmetic calculator in va
   swipl -f prologcalcelif.pl
   ```
 
-### **Ada (`adacalcelif.adb`)**
+### **Ada (`calculator.adb`)**
 - Compile and run using:
   ```sh
-  gcc -c adacalcelif.adb
-  gnatmake adacalcelif.adb
-  ./adacalcelif
+  gcc -c calculator.adb
+  gnatmake calculator.adb
+  ./calculator
   ```
 
 ### **Rust (`rustcalcelif.rs`)**
