@@ -1,0 +1,23 @@
+(define (calculator)
+  (display "Enter expression (e.g., 5 + 3) or 'exit' to quit: ")
+  (let ((input (read-line)))
+    (if (string-ci=? input "exit")
+        (begin (display "Goodbye!\n") (exit))
+        (let* ((tokens (string-split input #\space))
+               (first (string->number (list-ref tokens 0)))
+               (oper (list-ref tokens 1))
+               (other (string->number (list-ref tokens 2))))
+          (if (or (not first) (not other) (not (member oper '("+" "-" "*" "/"))))
+              (begin (display "\nInvalid input. Please enter in format: number operator number\n\n") (calculator))
+              (let ((result
+                     (cond
+                       ((string=? oper "+") (+ first other))
+                       ((string=? oper "-") (- first other))
+                       ((string=? oper "*") (* first other))
+                       ((string=? oper "/") (if (= other 0)
+                                                  (begin (display "\nCannot divide by 0\n\n") (calculator))
+                                                  (/ first other))))))
+                (display (format "\nResult: ~a ~a ~a = ~a\n\n" first oper other result))
+                (calculator)))))))
+
+(calculator)
