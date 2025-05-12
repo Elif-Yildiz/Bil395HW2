@@ -1,6 +1,6 @@
-# Bil395HW2
-Elif Yıldız 211101046
+
 # Multi-Language Simple Calculator
+by Elif Yıldız
 
 This repository contains implementations of a simple arithmetic calculator in various programming languages. Each program allows users to input basic arithmetic expressions (addition, subtraction, multiplication, and division) and returns the computed result. The user can exit the program by typing "exit".
 
